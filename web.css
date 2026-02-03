@@ -1,0 +1,29 @@
+body {
+	margin: 0;	
+	padding: 1vh;
+	background-color: white;
+}
+
+#webTitle {
+	text-align: center;
+}
+
+nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;	
+	align-content: center;
+
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	border: none;
+	background-color: #D3D3D3;
+	height: 5vh;
+	color: black;
+}
+
+nav a{
+	color: black;
+	text-decoration: none;
+}
