@@ -1,8 +1,8 @@
 pages:
   stage: deploy
   script:
-    - mkdir public
-    - cp -r * public
+    - mkdir -p public
+    - find . -maxdepth 1 ! -name public ! -name . -exec cp -r {} public/ \;
   artifacts:
     paths:
       - public
