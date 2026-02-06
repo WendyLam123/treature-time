@@ -1,7 +1,7 @@
 body {
 	margin: 0;	
 	padding: 1vh;
-	background-color: white;
+	background-color: #E6E6E6;
 }
 
 #webTitle {
@@ -18,12 +18,12 @@ nav ul {
 	margin: 0;
 	overflow: hidden;
 	border: none;
-	background-color: #D3D3D3;
+	background-color: #E6E6E6;
 	height: 5vh;
-	color: black;
+	color: #070340;
 }
 
 nav a{
-	color: black;
+	color: #112173;
 	text-decoration: none;
 }
