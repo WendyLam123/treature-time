@@ -2,6 +2,7 @@ body {
 	margin: 0;	
 	padding: 1vh;
 	background-color: #E6E6E6;
+	height: 100%;
 }
 
 #webTitle {
@@ -26,4 +27,61 @@ nav ul {
 nav a{
 	color: #112173;
 	text-decoration: none;
+}
+
+.homeHeader {
+	display: flex;
+	flex-direction: row;
+	background-color: #070340;
+	width: 100%;
+	height: auto;
+	margin-bottom: 200px;
+}
+
+.homeHeader img {
+	margin: 10px;
+	height: 100px;
+	width: auto;
+	float: left;
+}
+
+.homeHeader h1 {
+	color: #E9D358;
+	font-size: 2.5em;
+	margin: auto;
+	padding-right: 142px;
+}
+
+.itemBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #E6E6E6;
+	width: 100%;
+	height: auto;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 30%;
+	height: 80%;
+	border: 1px solid black;
+	border-radius: .5em;
+	background-color: #070340;
+}
+
+.item img {
+	width: 90%;
+	height: auto;
+	margin-top: 20px;
+	border-radius: .5em;
+}
+
+.item h2, p {
+	color: #E9D358;
+	text-align: center;
 }
