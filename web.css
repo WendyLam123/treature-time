@@ -85,3 +85,19 @@ nav a{
 	color: #E9D358;
 	text-align: center;
 }
+
+.item li {
+	color: #E9D358;
+	text-align: left;
+	font-size: 1.5em;
+}
+
+.intro{
+	color: #112173;
+}
+
+.dining_option_4{
+	display: flex;
+	flex-direction: row;
+	gap: 1vw;
+}
