@@ -23,45 +23,10 @@
 	<div class="content">
 		<h2>Introduction:</h2>
 		<p class="intro">Drexel's meal plans provide a flexible and convenient way to manage student meals. But the more option student have, the more questions students may have regarding which meal plan to choose. To help students make a wise decision, here are all the meal plan options Drexel provides to freshmen and upperclassman and graduate students. Drexel freshmen have 3 options. Drexel upperclassmen and graduate students have 7 more options other than the 3 options they can choose.</p>
-		<h2>Where To Eat?</h2>
-		<p class="intro">More Information About Drexel's Dining Plan:Drexel's dining plans mainly include two components: meal swipes and dining dollars. By purchasing plans with meal swipes, such as Weekly 14 + 250 Dining Dollars, students can use one meal swipe to exchange a meal in the All-you-care-to-eat dining hall. Students can also choose to use one meal swipe to exchange a meal in the Perelman Center for Jewish Life Cafe. But it's important to know that Drexel only has one All-you-care-to-eat dining hall right now, which is the Urban Eatery. <br> The dining dollars are money stored in the Drexel dining card. You can swipe the card to purchase food at various campus dining locations that accept dining dollars. For example, Northside Dining Terrace is a popular dining location where people purchase food using dining dollars. </p>
 
-		<ul class="intro">
-			<li>With meal plans that include meal swipes, students can enjoy unlimited access meal in the Urban Eatery.</li>
-			<li>You can also use a meal swipe to exchange a meal in the Perelman Center for Jewish Life Cafe, where provide kosher meals.</li>
-                </ul>
-	
-		<h2>Popular Dining Locations:</h2>
-		<!--dining halls--!>
-		
-		<div class="intro">
-		<h2>All-you-care-to-eat dining hall: </h2>
-		<h3>Urban Eatery:</h3>
+                <!--dining halls--!>
+                <!--dining halls--!>
 		<iframe src = "https://images.elevate-dxp.com/adobe/assets/urn:aaid:aem:53b09e92-4a99-4573-9d5e-fc9971d6c6aa/as/_0180618_230727.webp?width=600&crop=0p,0.19p,100p,99.62p" title = "urban eatery" style="height: 300px; width: 600px"></iframe>
-		
-			<p>Location: 3400 Lancaster Ave, Philadelphia, PA 19104</p>
-			<p>Phone: (215) 571-3286</p>
-			<p>Menu: https://drexel.mydininghub.com/en/location/urban-eatery<p>
-			<p>Hours:<p>
-			<ul>
-				<li>Monday-Thursday: 7 AM–10 PM</li>
-				<li>Friday: 7 AM–9 PM</li>
-				<li>Saturday: 9 AM–9 PM</li>
-				<li>Sunday 9 AM–10 PM</li>
-			</ul>	
-			<p>Click any day to see the full meal hour. <p>	
-	
-			<p>Urban Eatery provides rich food options. It offers 7 different stations and has a variety of healthy and diverse vegetable dishes.</p><br>
-			<p>Calories of different foods are all listed in the menu. If you are on a diet or want to check the calories to selectively intake every day's calories, this is an easy choice for you!</p><br>
-			<p>If you are a person who likes meeting new people, eating in an urban eatery can also be a good choice! Because there are a lot of students there, especially freshmen.</p><br>
-			<p>But based on feedback in Google reviews, people have mixed opinions about the food provided. While some dishes are enjoyable, some dishes may have a questionable flavor and texture. The service also has an area of improvement.</p><br>
-			<p>Google reviews: 2.4 / 5 stars</p>
-			<br>
-		</div>		
-
-		<h3>Other Popular On-Campus Dining Options:</h3>
-		<!--Perelman Center for Jewish Life Cafe:--!>
-		<!--Northside Dining Terrace:--!>
 
 		<h2>First Year Plans:</h2>
 		<div class = "itemBar">

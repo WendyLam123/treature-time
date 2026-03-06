@@ -21,6 +21,7 @@ nav {
         padding: 0 20px; /*--need to fix it--*/
 }
 
+
 .nav_item {
 	display: flex;
 	flex-direction: row;
@@ -121,7 +122,11 @@ nav li a:hover{
 }
 
 .intro{
-	color: #112173;
+	color:#112173;
+}
+
+.intro p{
+	color:#112173;
 }
 
 .dining_option{
