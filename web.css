@@ -1,7 +1,12 @@
 body {
 	background-color: #E6E6E6;
 	margin: 0;
-	padding: 0;
+	padding-bottom: 100px;
+}
+
+a {
+	text-decoration: none;
+	width: auto;
 }
 
 #navLogo{
@@ -26,9 +31,9 @@ nav {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	flex: 1
-        justify-content: space-around;
-        align-content: center;
+	flex: 1;
+	justify-content: space-around;
+	align-content: center;
 	list-style-type: none;
 
 }
@@ -58,14 +63,12 @@ nav li a:hover{
 	padding: 60px 20px 20px 20px
 }
 
-
 .homeHeader {
 	display: flex;
 	flex-direction: row;
 	background-color: #070340;
 	width: 100%;
 	height: auto;
-	margin-bottom: 200px;
 }
 
 .homeHeader img {
@@ -86,23 +89,34 @@ nav li a:hover{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
-	background-color: #E6E6E6;
+	align-content: center;
 	width: 100%;
-	height: auto;
+	gap: 10px;
+}
+
+.itemBar a {
+    display: flex;
+    text-decoration: none;
+	width: 30%;
 }
 
 .item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 30%;
-	height: 80%;
-	border: 1px solid black;
-	border-radius: .5em;
-	background-color: #070340;
-	text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: .5em;
+    background-color: #070340;
+    margin: 0px 10px 0px 10px;
+    padding-bottom: 20px;
+}
+
+.item.hover {
+	background-color: #E9D358;
+	color: #070340;
 }
 
 .item img {
@@ -125,7 +139,6 @@ nav li a:hover{
 
 .intro{
 	color:#112173;
-	text-align: left;
 }
 
 .intro p{
@@ -141,16 +154,60 @@ nav li a:hover{
 	gap: 10px;
 }
 
-.diningLocationsContainer{
-	justify-items: center;
-	width: 100%;
-	color:#112173;
-
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #070340;
+    width: 100%;
+    padding: 1vh;
+    height: auto;
+	margin-bottom: 200px;
 }
-.diningLocationsContainer p{
-	color:#112173;
+
+.navbar a{
+    border-radius: .5em;
+    padding: 10px;
+    color: #E9D358;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0 100px 0 100px;
 }
 
-.diningLocations{
-	width: 50vw;
+.navbar a:hover{
+    background-color: #E9D358;
+    color: #070340;
+}
+
+.expenseForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.calculateButton {
+	text-align: center;
+	background-color: #070340;
+	color: #E9D358;
+	border: none;
+	border-radius: .5em;
+	padding: 10px 20px;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.calculateButton:hover {
+	background-color: #E9D358;
+	color: #070340;
+}
+
+.item h2 {
+	font-size: 2em;
+}
+
+.item p {
+	font-size: 1.2em;
 }
