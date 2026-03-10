@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>    
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="">
+		<title>Calculator</title>
+		<link href="web.css" rel="stylesheet" type="text/css" />
+		<script src="web.js"></script>
+	</head>
+
+	<body>
+		<div class = "homeHeader">
+			<img src="Images/logo.png" alt="Drexel Logo" class="logo">
+			<h1>Calculator</h1>
+		</div>
+        <div class = "navbar">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="dining.html">Dining</a>
+                <a href="housing.html">Housing</a>
+                <a href="calculator.html">Calculator</a>
+            </ul>
+        </div>
+
+        <div class = "form">
+            <form id="expenseForm" style = "display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: -100px auto;">
+
+                <!-- Budgetary Constraints Section -->
+                <label for="totalBudget">Total Term Budget ($):</label>
+                <input type="number" id="totalBudget" name="totalBudget" placeholder="e.g. 10000" min="0">
+
+                <label for="weeklyAllowance">Desired Weekly Spending Money ($):</label>
+                <input type="number" id="weeklyAllowance" name="weeklyAllowance" placeholder="e.g. 50" min="0">
+
+                <label for="cookingFrequency">How many meals do you cook yourself per week?</label>
+                <select id="cookingFrequency" name="cookingFrequency">
+                    <option value="0">0 - I rely entirely on campus food</option>
+                    <option value="5">Around 5 - Mostly breakfast/snacks</option>
+                    <option value="10">10+ - I have a kitchen and use it</option>
+                </select>
+
+                <label for="otherExpenses">Other Fixed Costs (Books, Travel, etc.):</label>
+                <input type="number" id="otherExpenses" name="otherExpenses" placeholder="e.g. 500" min="0">
+
+
+                <div class="calculateButton" onclick="calculateExpenses()">Calculate</div>
+            </form>
+
+            <script src="web.js"></script>
+
+            <div id="result"></div>
+	</body>
+</html>
