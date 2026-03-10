@@ -1,156 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Drexel Housing</title>
-	<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <title>Drexel Housing | The Ultimate Guide</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      border-left: 40px solid #07294d;
+      border-right: 40px solid #07294d;
+      min-height: 100vh;
+    }
 
+    .homeHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 5%;
+      background: #07294d;
+      border-bottom: 4px solid #ffc600;
+    }
+
+    .logo { 
+      height: 65px; 
+      width: auto; 
+      transition: transform 0.3s; 
+    }
+
+    .logo:hover { 
+      transform: scale(1.05); 
+    }
+
+    .navigation ul { 
+      display: flex; 
+      list-style: none; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    .navigation li { 
+      margin-left: 25px; 
+    }
+
+    .navigation a { 
+      color: white; 
+      text-decoration: none; 
+      font-weight: bold; 
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      align-items: start;
+    }
+
+    .quick-tips-bar {
+      grid-column: 1 / -1;
+      background: #ffc600;
+      color: #07294d;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-around;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar-wrapper {
+      height: 100%;
+    }
+
+    .sidebar-master-list {
+      background: linear-gradient(rgba(7, 41, 77, 0.8), rgba(7, 41, 77, 0.8)), 
+      url('https://drexel.edu/~/media/Drexel/Core-Site-Group/Core/Images/admissions/undergrad/drexel-perelman-plaza-students/drexel-perelman-plaza-students_16x9.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      border-radius: 15px;
+      color: white;
+      position: sticky;
+      top: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .sidebar-card {
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+    }
+
+    .sidebar-card h4 { 
+      margin: 0 0 5px 0; 
+      color: #07294d; 
+      border-bottom: 2px solid #ffc600; 
+    }
+
+    /* --- Content Area --- */
+    .info-content {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .info-content h2 { 
+      color: #07294d; 
+      border-left: 5px solid #ffc600; 
+      padding-left: 15px; 
+    }
+
+    .review-box {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .choice-pill {
+      background: #eef2ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .deep-dive-container {
+      grid-column: 1 / -1;
+      margin-top: 50px;
+      border-top: 5px solid #07294d;
+      padding-top: 40px;
+    }
+
+    .deep-dive-header {
+      text-align: center;
+      background: #07294d;
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+    }
+
+    .dorm-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 40px;
+    }
+
+    .dorm-entry {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: flex; 
+      flex-direction: column;
+    }
+
+    .dorm-info-padding { 
+      padding: 25px; 
+      flex-grow: 1; 
+    }
+
+    .dorm-info-padding h3 { 
+      margin-top: 0; 
+      color: #07294d; 
+      border-bottom: 3px solid #ffc600; 
+      display: inline-block; 
+    }
+
+    .tag-row { 
+      margin: 10px 0; 
+    }
+
+    .tag { 
+      font-size: 0.75rem; 
+      background: #eef2ff; 
+      color: #07294d; 
+      padding: 4px 10px; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      margin-right: 5px; 
+    }
+
+    .layout-img {
+      width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 5px;
+      border: 1px solid #eee;
+    }
+  </style>
+</head>
 <body>
 
-<div class="homeHeader">
-	<img src="Images/logo.png" alt="Drexel Logo" class="logo">
-	<h1>Housing Options First Year / Upperclassmen</h1>
+  <div class="homeHeader">
+    <a href="https://drexel.edu" target="_blank">
+      <img src="https://www.eduopinions.com/wp-content/uploads/2018/05/Drexel-Univesity-DU-logo.jpg" alt="Drexel Logo" class="logo">
+    </a>
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="housing.html">Housing</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
 
-	<nav class="navigation">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="dining.html">Dining</a></li>
-			<li><a href="housing.html">Housing</a></li>
-			<li><a href="calculator.html">Calculator</a></li>
-		</ul>
-	</nav>
-</div>
+  <div class="main-layout">
+    
+    <div class="quick-tips-bar">
+      <span>⚡ Pro Tip: Laundry is free in all halls!</span>
+      <span>📍 Location: Race Street is closest to the DAC.</span>
+      <span>🛠️ Maintenance: Use the Drexel DragonFly app for repairs.</span>
+    </div>
 
-<div class="content">
+    <div class="sidebar-wrapper">
+      <div class="sidebar-master-list">
+        <h2 style="text-align:center; text-transform:uppercase; letter-spacing:1px;">The Master List</h2>
+        <p style="font-size: 0.8rem; text-align: center; margin-bottom: 20px;">Quick Specs & Costs</p>
+        
+        <div class="sidebar-card">
+          <h4>Bentley Hall</h4>
+          <p><b>$4,015/Term</b> | Honors Only<br>Hybrid Style - Private Entry Bath</p>
+        </div>
 
-	<h2>Introduction:</h2>
-	<p class="intro">
-	Drexel University offers a variety of residence halls designed to fit different lifestyles.
-	Some students prefer a traditional hallway layout, others prefer suite-style apartment living,
-	and some want a unique hybrid experience. Below are all housing options available to
-	first-year and upperclass students.
-	</p>
+        <div class="sidebar-card">
+          <h4>Kelly Hall</h4>
+          <p><b>$4,015/Term</b> | 2023 Reno<br>Traditional - Neighborhood Layout</p>
+        </div>
 
-	<h2>Traditional Style Halls:</h2>
-	<p class="intro">
-	Traditional halls feature hallway corridor layouts with shared community spaces.
-	These buildings are often the most social.
-	</p>
+        <div class="sidebar-card">
+          <h4>Towers Hall</h4>
+          <p><b>$3,840/Term</b> | Most Social<br>Traditional - 15 Floors</p>
+        </div>
 
-	<div class="dining_option">
+        <div class="sidebar-card">
+          <h4>Millennium Hall</h4>
+          <p><b>$4,015/Term</b> | Best Views<br>Hybrid - Private Stalls</p>
+        </div>
 
-		<div class="item options">
-			<h2>Bentley Hall</h2>
-			<p>Style: Traditional</p>
-			<p>Renovated in 2019</p>
-			<p>Alternating study & social lounges</p>
-			<p>Honors College community</p>
-			<p>Private-entry shared bathrooms</p>
-		</div>
+        <div class="sidebar-card">
+          <h4>North Hall</h4>
+          <p><b>$4,310/Term</b> | Suite Style<br>4-6 Person Apartment Suites</p>
+        </div>
 
-		<div class="item options">
-			<h2>Kelly Hall</h2>
-			<p>Style: Traditional</p>
-			<p>Renovated in 2023</p>
-			<p>Spiral staircase “neighborhood” design</p>
-			<p>Very social environment</p>
-		</div>
+        <div class="sidebar-card">
+          <h4>Race Street</h4>
+          <p><b>$4,310/Term</b> | Athlete Fav<br>4-Person High End Suites</p>
+        </div>
 
-		<div class="item options">
-			<h2>Towers Hall</h2>
-			<p>Style: Traditional</p>
-			<p>15-floor high-rise</p>
-			<p>Deep bay windows in every room</p>
-			<p>Classic freshman dorm experience</p>
-		</div>
+        <div class="sidebar-card">
+          <h4>Caneris Hall</h4>
+          <p><b>$4,310/Term</b> | Reliable Living<br>4-6 Person Suites</p>
+        </div>
 
-	</div>
+        <div class="sidebar-card">
+          <h4>Van Rensselaer</h4>
+          <p><b>$4,310/Term</b> | Historic Vibes<br>3-4 Person Suites w/ Gas Range</p>
+        </div>
+      </div>
+    </div>
 
-	<h2>Suite Style Halls:</h2>
-	<p class="intro">
-	Suite-style halls provide shared living rooms and kitchenettes,
-	offering a more apartment-like experience.
-	</p>
+    <div class="info-content">
+      <h2>Welcome to Your New Home</h2>
+      <p>Drexel University offers a variety of residence halls designed to fit different lifestyles. Some students prefer a traditional hallway layout, others prefer suite-style apartment living, and some want a unique hybrid experience. <b>This is the unfiltered reality of campus living.</b></p>
 
-	<div class="dining_option">
+      <h3>The "Reddit" Consensus: Unfiltered Student Advice</h3>
+      <div class="review-box">
+        <p><i>"If you choose Millennium, prepare for the <b>'Millennium Shake'</b>. During high winds, the building sways slightly. It's totally safe, but it'll definitely wake you up at 2 AM if you aren't used to it."</i></p>
+        <hr>
+        <p><i>"The Towers elevators are a nightmare during peak class times. If you live on floor 4 or below, just take the stairs. Your legs will thank you, and you'll actually make it to class on time."</i></p>
+      </div>
 
-		<div class="item options">
-			<h2>North Hall</h2>
-			<p>4–6 person suites</p>
-			<p>Full kitchenettes</p>
-			<p>Massive 6th floor study lounge</p>
-			<p>Quieter, apartment-style feel</p>
-		</div>
+      <h3>Style Guide: Which one fits you?</h3>
+      <p><b>Traditional Halls:</b> Feature hallway corridor layouts with shared community spaces. These are the most social options for freshmen who want to make friends fast.</p>
+      <p><b>Suite Style:</b> Provide shared living rooms and kitchenettes. You get more space, but you are responsible for cleaning your own bathroom!</p>
 
-		<div class="item options">
-			<h2>Race Street Residences</h2>
-			<p>4-person apartment-style suites</p>
-			<p>Two showers per unit</p>
-			<p>Very social / party reputation</p>
-			<p>Close to classes and gym</p>
-		</div>
+      <h3>Which Dorm Should You Choose?</h3>
+      <div class="choice-pill">🚀 <b>The Socialite:</b> Choose <b>Towers</b> or <b>Kelly</b>. You'll meet everyone in the first week.</div>
+      <div class="choice-pill">📚 <b>The Scholar:</b> Choose <b>Bentley</b>. It’s quiet and literally seconds from the library.</div>
+      <div class="choice-pill">🍳 <b>The Chef:</b> Choose <b>Van Rensselaer</b>. The only dorm with actual gas ranges.</div>
+      <div class="choice-pill">🏙️ <b>The View Seeker:</b> Choose <b>Millennium</b>. The 17th-floor lounge is unbeatable.</div>
 
-		<div class="item options">
-			<h2>Caneris Hall</h2>
-			<p>4–6 person suites</p>
-			<p>Private shared bathrooms</p>
-			<p>Free laundry</p>
-			<p>Clean and reliable</p>
-		</div>
+      <h3>Technical Standards</h3>
+      <ul>
+        <li><b>Furniture:</b> All rooms come with a bed (Twin XL), desk, chair, and wardrobe per student.</li>
+        <li><b>AC:</b> All halls except some older units in North feature full central air conditioning.</li>
+        <li><b>Connectivity:</b> DragonFly Wi-Fi and Ethernet ports are standard in every room.</li>
+      </ul>
+    </div>
 
-		<div class="item options">
-			<h2>Van Rensselaer Hall</h2>
-			<p>3–4 person historic suites</p>
-			<p>Gas ranges in kitchenettes</p>
-			<p>Free laundry</p>
-			<p>Independent living feel</p>
-		</div>
+    <div class="deep-dive-container">
+      <div class="deep-dive-header">
+        <h1>Detailed Dormitory Guide</h1>
+        <p>Every hall, every layout, and every location on campus.</p>
+      </div>
 
-	</div>
+      <div class="dorm-detail-grid">
 
-	<h2>Hybrid Style Hall:</h2>
-	<p class="intro">
-	Hybrid halls combine traditional and suite features with unique architecture.
-	</p>
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>Bentley Hall</h3>
+            <div class="tag-row"><span class="tag">Traditional</span><span class="tag">3301 Arch St</span></div>
+            <p><b>Best For:</b> Modern living & Honors students. Features alternating study/social lounges and private-entry shared bathrooms.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x04-2person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x13-2person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x26-2person.jpg" class="layout-img">
+          </div>
+        </div>
 
-	<div class="dining_option">
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>Kelly Hall</h3>
+            <div class="tag-row"><span class="tag">Traditional</span><span class="tag">203 N. 34th St</span></div>
+            <p><b>Best For:</b> Socialites. Famous for its "neighborhood" spiral staircase layout and large shared lounges.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/kelly-hall-typical-room-x13-2person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/kelly-hall-typical-room-x20-2person.jpg" class="layout-img">
+          </div>
+        </div>
 
-		<div class="item options">
-			<h2>Millennium Hall</h2>
-			<p>17-story cylindrical tower</p>
-			<p>Multi-purpose videogame room</p>
-			<p>Best skyline views</p>
-			<p>Very social engineering community</p>
-		</div>
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>Towers Hall</h3>
+            <div class="tag-row"><span class="tag">Traditional</span><span class="tag">101 N. 34th St</span></div>
+            <p><b>Best For:</b> Classic high-rise corridor style. Every room features deep bay windows—perfect for city views.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/towers-typical-room-x01-2person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/towers-typical-room-x09-2person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/towers-typical-room-x14-2person.jpg" class="layout-img">
+          </div>
+        </div>
 
-	</div>
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>Millennium Hall</h3>
+            <div class="tag-row"><span class="tag">Hybrid</span><span class="tag">223 N. 34th St</span></div>
+            <p><b>Best For:</b> Modernity and Skyline views. 17-story cylindrical tower with private-entry bathrooms in every room.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/millennium-typical-room-x04-2person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/millennium-typical-room-x12-2person.jpg" class="layout-img">
+          </div>
+        </div>
 
-	<h2>Important Information:</h2>
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>North Hall</h3>
+            <div class="tag-row"><span class="tag">Suite</span><span class="tag">3200 Race St</span></div>
+            <p><b>Best For:</b> Apartment feel. 4–6 person suites with full kitchenettes and a massive 6th-floor study lounge.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/north-hall-typical-suite-ex12-6person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/north-hall-typical-suite-wx14-4person.jpg" class="layout-img">
+          </div>
+        </div>
 
-	<div class="intro">
-		<ul>
-			<li>Traditional halls typically have shared hallway bathrooms.</li>
-			<li>Suite halls require students to clean their own shared bathrooms.</li>
-			<li>Race Street and North are popular for apartment-style living.</li>
-			<li>Millennium offers private bathrooms but smaller room sizes.</li>
-			<li>Van Rensselaer is best for independent students who like to cook.</li>
-		</ul>
-	</div>
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>Race Street Residences</h3>
+            <div class="tag-row"><span class="tag">Suite</span><span class="tag">3300 Race St</span></div>
+            <p><b>Best For:</b> Convenience & Socializing. Includes two showers per suite and is very close to classes and the gym.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/race-street-typical-suite-ada-x08-4person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/race-street-typical-suite-x14-4person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/race-street-typical-suite-x17-4person.jpg" class="layout-img">
+          </div>
+        </div>
 
-	<h2>Which Dorm Should You Choose?</h2>
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>Caneris Hall</h3>
+            <div class="tag-row"><span class="tag">Suite</span><span class="tag">115 N. 32nd St</span></div>
+            <p><b>Best For:</b> Clean and reliable living. 4–6 person suites with private shared bathrooms and free laundry.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/caneris-typical-suite-x12-4person/caneris-typical-suite-x12-4person_16x9.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/caneris-typical-suite-x17-6person.jpg" class="layout-img">
+          </div>
+        </div>
 
-	<div class="intro">
-		<ul>
-			<li>Want the most social experience? Choose Towers or Kelly.</li>
-			<li>Want the newest/most modern? Choose Bentley or Kelly.</li>
-			<li>Want as many roommates as possible? Choose North.</li>
-			<li>Want a suite and social vibe? Choose Race Street.</li>
-			<li>Want privacy and skyline views? Choose Millennium.</li>
-		</ul>
-	</div>
+        <div class="dorm-entry">
+          <div class="dorm-info-padding">
+            <h3>Van Rensselaer Hall</h3>
+            <div class="tag-row"><span class="tag">Suite</span><span class="tag">3320 Powelton Ave</span></div>
+            <p><b>Best For:</b> Historic vibes. 3–4 person historic suites with gas ranges and a private brownstone feel.</p>
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/van-r-typical-suite-x10-4person.jpg" class="layout-img">
+            <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/van-r-typical-suite-x24-3person.jpg" class="layout-img">
+          </div>
+        </div>
 
-</div>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
