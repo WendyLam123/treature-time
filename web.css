@@ -60,7 +60,12 @@ nav li a:hover{
 }
 
 .content{
-	padding: 60px 20px 20px 20px
+	padding: 60px 20px 20px 20px;
+}
+
+.content p{
+	color: black;
+	text-align: left;
 }
 
 .homeHeader {
@@ -137,14 +142,6 @@ nav li a:hover{
 	font-size: 1.5em;
 }
 
-.intro{
-	color:#112173;
-}
-
-.intro p{
-	color:#112173;
-}
-
 .dining_option{
 	display: flex;
 	flex-direction: row;
@@ -152,6 +149,17 @@ nav li a:hover{
 	align-content: center;
 	width: 100%;
 	gap: 10px;
+}
+
+.diningLocationsContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.diningLocations{
+	width: 30%;
 }
 
 .navbar{
