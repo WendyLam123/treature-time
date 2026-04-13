@@ -6,8 +6,7 @@
 		<meta name="author" content="">
 		<title>Calculator</title>
 		<link href="web.css" rel="stylesheet" type="text/css" />
-		<script src="web.js"></script>
-	</head>
+		</head>
 
 	<body>
 		<div class = "homeHeader">
@@ -23,8 +22,8 @@
             </ul>
         </div>
 
-        <div class = "form">
-            <form id="expenseForm" style = "display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: -100px auto;">
+        <div class="form">
+            <form id="expenseForm" style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 40px auto;">
 
                 <!-- Budgetary Constraints Section -->
                 <label for="totalBudget">Total Term Budget ($):</label>
@@ -43,12 +42,11 @@
                 <label for="otherExpenses">Other Fixed Costs (Books, Travel, etc.):</label>
                 <input type="number" id="otherExpenses" name="otherExpenses" placeholder="e.g. 500" min="0">
 
-
                 <div class="calculateButton" onclick="calculateExpenses()">Calculate</div>
             </form>
 
-            <script src="web.js"></script>
-
-            <div id="result"></div>
+            <div id="result" style="max-width: 600px; margin: 20px auto;"></div>
+        </div>
+	<script src="web.js"></script>
 	</body>
 </html>
