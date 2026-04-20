@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Drexel Student Calculator</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    border-left: 40px solid #07294d;
+    border-right: 40px solid #07294d;
+}
+
+/* header */
+.homeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+    background: #07294d;
+    border-bottom: 4px solid #ffc600;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.homeHeader h1 {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* layout */
+.main-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+/* welcome bar */
+.welcome-bar {
+    grid-column: 1 / -1;
+    background: #ffc600;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* sidebar */
+.sidebar-master-list {
+    background: rgba(7,41,77,0.9);
+    padding: 20px;
+    border-radius: 14px;
+    color: white;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-card {
+    background: white;
+    color: #333;
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 12px;
+}
+
+.sidebar-card h4 {
+    margin: 0 0 5px 0;
+    color: #07294d;
+}
+
+/* content */
+.info-content {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.info-content h2 {
+    border-left: 5px solid #ffc600;
+    padding-left: 10px;
+    color: #07294d;
+}
+
+/* cards */
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.item-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+}
+
+.item-card.featured {
+    grid-column: span 2;
+}
+
+.card-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-padding {
+    padding: 18px;
+}
+
+.card-padding h3 {
+    margin: 0;
+    color: #07294d;
+}
+
+/* small human touch */
+.footer-note {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="homeHeader">
+    <div class="header-left">
+        <img src="DrexelLogo.png" class="logo">
+        <h1>Student Calculator</h1>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="housing.html">Housing</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="main-layout">
+
+<div class="welcome-bar">
+    This is basically everything I wish I had before starting at Drexel
+</div>
+
+<div class="sidebar-master-list">
+    <h2 style="text-align:center;">Quick Links</h2>
+    <p style="font-size:0.8rem; text-align:center;">Start here</p>
+
+    <div class="sidebar-card">
+        <h4>Calculator</h4>
+        <p>Figure out how much you're actually going to spend (it adds up fast).</p>
+    </div>
+
+    <div class="sidebar-card">
+        <h4>Housing</h4>
+        <p>See what dorms are actually like before you commit.</p>
+    </div>
+
+    <div class="sidebar-card">
+        <h4>Dining</h4>
+        <p>Meal plans, pros/cons, and what you'll realistically eat.</p>
+    </div>
+</div>
+
+<div class="info-content">
+    <h2>Starting at Drexel</h2>
+
+    <p>
+        Starting college here can be a lot at once — housing, food, costs, everything.
+        I made this to make those decisions a little easier (and more realistic).
+    </p>
+
+    <p style="margin-top:10px; font-size:0.9rem;">
+        💡 Quick tip: Location matters more than you think. Walking across campus in winter is rough.
+    </p>
+
+    <div class="item-grid">
+
+        <a href="housing.html" class="item-card featured">
+            <img src="millennium.jpg" class="card-img">
+            <div class="card-padding">
+                <h3>Housing</h3>
+                <p>Probably the biggest decision. Some dorms are way better than others.</p>
+            </div>
+        </a>
+
+        <a href="dining.html" class="item-card">
+            <img src="urban.jpg" class="card-img">
+            <div class="card-padding">
+                <h3>Dining</h3>
+                <p>Meal plans are convenient… but yeah, they’re expensive.</p>
+            </div>
+        </a>
+
+        <a href="calculator.html" class="item-card">
+            <img src="Calc.jpg" class="card-img">
+            <div class="card-padding">
+                <h3>Calculator</h3>
+                <p>Get a rough idea of what your term is actually going to cost.</p>
+            </div>
+        </a>
+
+    </div>
+
+    <div style="margin-top:25px;">
+        <h3>Quick thoughts</h3>
+        <ul>
+            <li>Housing > dining in importance</li>
+            <li>You will walk more than you expect</li>
+            <li>Elevators will be slow at the worst times</li>
+        </ul>
+    </div>
+
+    <p class="footer-note">
+        Made by a Drexel student, not the university.
+    </p>
+
+</div>
+
+</div>
+
+</body>
+</html>
