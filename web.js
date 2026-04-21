@@ -137,7 +137,7 @@ function calculateExpenses() {
 
     resultHTML += "<div style = \"background: #07294d; color: yellow; padding: 15px; border-radius: 10px;\">";
     resultHTML += "<hr>";
-    resultHTML += "<h2>Your Budget Breakdown</h2>";
+    resultHTML += "<h2 style='color: #E9D358'>Your Budget Breakdown</h2>";
     resultHTML += "<p><b>Total Budget:</b> $" + totalBudget + "</p>";
     resultHTML += "<p><b>Other Expenses:</b> $" + otherExpenses + "</p>";
     resultHTML += "<p><b>Spending Money (10 weeks):</b> $" + spendingMoney + "</p>";
@@ -154,7 +154,7 @@ function calculateExpenses() {
             var combo = topCombos[i];
 
             resultHTML += "<div style='border: 2px solid #07294d; border-radius: 10px; padding: 20px; margin-bottom: 20px; background: #07294d;'>";
-            resultHTML += "<h3>Option " + (i + 1) + "</h3>";
+            resultHTML += "<h3 style='color: #E9D358'>Option " + (i + 1) + "</h3>";
             resultHTML += "<p><b>Housing:</b> " + combo.housing.name + " — $" + combo.housing.cost + "/term (" + combo.housing.style + ")</p>";
             resultHTML += "<p><em>" + combo.housing.notes + "</em></p>";
             resultHTML += "<p><b>Dining Plan:</b> " + combo.dining.name + " — $" + combo.dining.cost + "/term</p>";
