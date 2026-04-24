@@ -48,6 +48,11 @@ a {
     background-color: #070340;
     margin: 0px 10px 0px 10px;
     padding-bottom: 20px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.item h2{
+	color:#E9D358 !important;
+	border: none !important;
 }
 
 .item.hover {
@@ -62,7 +67,7 @@ a {
 	border-radius: .5em;
 }
 
-.item {
+.item{
 	color: #E9D358;
 	text-align: center;
 }
