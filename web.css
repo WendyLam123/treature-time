@@ -1,24 +1,88 @@
 body {
+	background-color: #E6E6E6;
 	margin: 0;
-	padding: 0;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #f4f7f6;
-	border-left: 40px solid #07294d;
-	border-right: 40px solid #07294d;
-	min-height: 100vh;
+	padding-bottom: 100px;
 }
+
 a {
 	text-decoration: none;
 	width: auto;
 }
 
-.content{
-	padding: 60px 20px 20px 20px;
+#navLogo{
+	flex-shrink: 0;
 }
 
-.content p{
-	color: black;
-	text-align: left;
+nav {
+	position: fixed;
+	top: 0;
+        display: flex;
+        height: 10vh;
+        width: 100%;
+        z-index: 100;
+        border: none;
+        background-color: #070340;
+        margin: 0;
+        padding: 0 20px; /*--need to fix it--*/
+}
+
+
+.nav_item {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex: 1;
+	justify-content: space-around;
+	align-content: center;
+	list-style-type: none;
+
+}
+
+nav li{
+	width: 100%;
+	height: 100%;
+}
+
+nav li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	align-content: center;
+        color: #E9D358;
+        text-decoration: none;
+        font-size: 1.5em;
+}
+
+nav li a:hover{
+	background-color: #E9D358;
+        color: #070340;
+}
+
+.content{
+	padding: 60px 20px 20px 20px
+}
+
+.homeHeader {
+	display: flex;
+	flex-direction: row;
+	background-color: #070340;
+	width: 100%;
+	height: auto;
+}
+
+.homeHeader img {
+	margin: 10px;
+	height: 100px;
+	width: auto;
+	float: left;
+}
+
+.homeHeader h1 {
+	color: #E9D358;
+	font-size: 2.5em;
+	margin: auto;
+	padding-right: 142px;
 }
 
 .itemBar {
@@ -28,6 +92,8 @@ a {
 	align-content: center;
 	width: 100%;
 	gap: 10px;
+	padding: 20px 40px;
+	box-sizing: border-box;
 }
 
 .itemBar a {
@@ -48,11 +114,6 @@ a {
     background-color: #070340;
     margin: 0px 10px 0px 10px;
     padding-bottom: 20px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-.item h2{
-	color:#E9D358 !important;
-	border: none !important;
 }
 
 .item.hover {
@@ -67,7 +128,7 @@ a {
 	border-radius: .5em;
 }
 
-.item{
+.item h2, p {
 	color: #E9D358;
 	text-align: center;
 }
@@ -76,6 +137,14 @@ a {
 	color: #E9D358;
 	text-align: left;
 	font-size: 1.5em;
+}
+
+.intro{
+	color:#112173;
+}
+
+.intro p{
+	color:#112173;
 }
 
 .dining_option{
@@ -87,31 +156,6 @@ a {
 	gap: 10px;
 }
 
-/*need to change to the housing page's tag style*/
-.content_in_row{
-	display: flex;
-	justify-content: space-around;
-}
-.content_in_row p{
-	background: gray;
-	padding: 5px;
-}
-
-.diningLocationsContainer{
-	display: flex;
-	gap: 30px;
-	width: 80%;
-	margin: 0 auto;
-	overflow-x: auto;
-	padding: 20px;
-}
-
-.diningLocations{
-	width: auto;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-	padding: 15px;
-}
-
 .navbar{
     display: flex;
     flex-direction: row;
@@ -121,7 +165,7 @@ a {
     width: 100%;
     padding: 1vh;
     height: auto;
-	margin-bottom: 200px;
+	margin-bottom: 10px;
 }
 
 .navbar a{
@@ -168,192 +212,4 @@ a {
 
 .item p {
 	font-size: 1.2em;
-}
-
-/*Housing*/
-
-.homeHeader {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 15px 5%;
-	background: #07294d;
-	border-bottom: 4px solid #ffc600;
-}
-
-.logo { 
-	height: 65px; 
-	width: auto; 
-	transition: transform 0.3s; 
-}
-
-.logo:hover { 
-	transform: scale(1.05); 
-}
-
-.navigation ul { 
-	display: flex; 
-	list-style: none; 
-	margin: 0; 
-	padding: 0; 
-}
-
-.navigation li { 
-	margin-left: 25px; 
-}
-
-.navigation a { 
-	color: white; 
-	text-decoration: none; 
-	font-weight: bold; 
-}
-
-.main-layout {
-	display: grid;
-	grid-template-columns: 350px 1fr;
-	gap: 30px;
-	max-width: 1400px;
-	margin: 0 auto;
-	padding: 40px 20px;
-	align-items: start;
-}
-
-.quick-tips-bar {
-	grid-column: 1 / -1;
-	background: #ffc600;
-	color: #07294d;
-	padding: 20px;
-	border-radius: 10px;
-	margin-bottom: 30px;
-	display: flex;
-	justify-content: space-around;
-	font-weight: bold;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.sidebar-wrapper {
-	height: 100%;
-}
-
-.sidebar-master-list {
-	background: linear-gradient(rgba(7, 41, 77, 0.8), rgba(7, 41, 77, 0.8)), 
-	url('https://drexel.edu/~/media/Drexel/Core-Site-Group/Core/Images/admissions/undergrad/drexel-perelman-plaza-students/drexel-perelman-plaza-students_16x9.jpg');
-	background-size: cover;
-	background-position: center;
-	padding: 20px;
-	border-radius: 15px;
-	color: white;
-	position: sticky;
-	top: 20px;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.sidebar-card {
-	background: rgba(255, 255, 255, 0.95);
-	color: #333;
-	margin-bottom: 15px;
-	padding: 15px;
-	border-radius: 10px;
-	font-size: 0.85rem;
-}
-
-.sidebar-card h4 { 
-	margin: 0 0 5px 0; 
-	color: #07294d; 
-	border-bottom: 2px solid #ffc600; 
-}
-
-/* --- Content Area --- */
-.info-content {
-	background: white;
-	padding: 40px;
-	border-radius: 15px;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.info-content h2 { 
-	color: #07294d; 
-	border-left: 5px solid #ffc600; 
-	padding-left: 15px; 
-}
-
-.review-box {
-	background: #fdfdfd;
-	border: 1px solid #eee;
-	padding: 20px;
-	border-radius: 10px;
-	margin: 20px 0;
-}
-
-.choice-pill {
-	background: #eef2ff;
-	padding: 15px;
-	border-radius: 8px;
-	margin-bottom: 10px;
-	display: block;
-}
-
-.deep-dive-container {
-	grid-column: 1 / -1;
-	margin-top: 50px;
-	border-top: 5px solid #07294d;
-	padding-top: 40px;
-}
-
-.deep-dive-header {
-	text-align: center;
-	background: #07294d;
-	color: white;
-	padding: 30px;
-	border-radius: 15px;
-	margin-bottom: 40px;
-}
-
-.dorm-detail-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-	gap: 40px;
-}
-
-.dorm-entry {
-	background: white;
-	border-radius: 15px;
-	overflow: hidden;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-	display: flex; 
-	flex-direction: column;
-}
-
-.dorm-info-padding { 
-	padding: 25px; 
-	flex-grow: 1; 
-}
-
-.dorm-info-padding h3 { 
-	margin-top: 0; 
-	color: #07294d; 
-	border-bottom: 3px solid #ffc600; 
-	display: inline-block; 
-}
-
-.tag-row { 
-	margin: 10px 0; 
-}
-
-.tag { 
-	font-size: 0.75rem; 
-	background: #eef2ff; 
-	color: #07294d; 
-	padding: 4px 10px; 
-	border-radius: 5px; 
-	font-weight: bold; 
-	margin-right: 5px; 
-}
-
-.layout-img {
-	width: 100%;
-	height: auto;
-	margin-top: 15px;
-	border-radius: 5px;
-	border: 1px solid #eee;
 }
