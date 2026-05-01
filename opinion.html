@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>    
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="">
+		<title>Dining</title>
+		<link href="web.css" rel="stylesheet" type="text/css" />
+		<script src="https://kit.fontawesome.com/44ae50a47e.js" crossorigin="anonymous"></script>
+		<script src="web.js"></script>
+	</head>
+
+<body>
+
+  <div class="homeHeader">
+    <a href="https://drexel.edu" target="_blank">
+      <img src="/Images/logo.png" alt="Drexel Logo" class="logo">
+    </a>
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="housing.html">Housing</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-layout-opinion_page">
+    <h1>Drexel Housing / Dining Survey</h1>
+    <form id="opinion_form">
+      <div class="container">
+        <p><strong>Which area are you evaluating?</strong></p>
+        <label for="areas">Choose an area:</label>
+        <select name="areas" id="area-select">
+          <option value="housing">Housing</option>
+          <option value="dining">Dining</option>
+          <option value="both">Both</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="container">
+        <p><strong>Rate each item on a scale of 1 to 5:</strong></p>
+        <p>5 = Excellent</p> 
+        <p>3 = Neutral</p>
+        <p>1 = Very poor</p>
+      </div>
+
+      <div class="container">
+      <label for="satification">Overall, how satisfied are you with your experience?</label>
+        <p>(1 - Very dissatisfied &#8594; 5 - Very satisfied)</p>
+        <select name="satification" id="satification">
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+
+      <div class="container">
+      <label for="value">How would you rate the value for money (cost vs quality)?</label>
+        <p>(1 - Very poor &#8594; 5 - Excellent)</p>
+        <select name="value" id="value">
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+
+      <div class="container">
+      <label for="convenient">How convenient was this experience</label>
+        <p>(1 - Very inconvenient &#8594; 5 - Very convenient)</p>
+        <select name="convenient" id="convenient">
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+
+      <div class="container">
+      <label for="feedback">Do you have any other feedback about your experience?</label>
+      <br><br>
+      <textarea name="feedback" id="feedback" placeholder="Type your feedback here..." style="width: 90%; height:100px"></textarea>
+      </div>
+
+      <div class="container">
+      <label for="web_rank">How was your experience using this website?</label>
+        <p>(1 - Not satisified &#8594; 5 - Very satisified)</p>
+        <select name="web_rank" id="web_rank">
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+      
+      <div class="container">
+      <label for="web_feedback">Do you have any other feedback for the website?</label>
+      <br><br>
+      <textarea name="web_feedback" id="web_feedback" placeholder="Type your feedback here..." style="width: 90%; height:100px;"></textarea>
+      </div>
+      <br>
+
+      <div class="button_container">
+        <button type="submit" class="submit_button">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+  
+
+  <div class="main-layout">
+
+    </div>
+</body>
