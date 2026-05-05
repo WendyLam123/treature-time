@@ -135,7 +135,7 @@ function calculateExpenses() {
     // --- Build the results HTML to show the user ---
     var resultHTML = "";
 
-    resultHTML += "<div style = \"background: #07294d; color: yellow; padding: 15px; border-radius: 10px;\">";
+    resultHTML += "<div style = \"background: #07294d; color: #E9D358; padding: 15px; border-radius: 10px;\">";
     resultHTML += "<hr>";
     resultHTML += "<h2 style='color: #E9D358'>Your Budget Breakdown</h2>";
     resultHTML += "<p><b>Total Budget:</b> $" + totalBudget + "</p>";
@@ -148,12 +148,12 @@ function calculateExpenses() {
     if (topCombos.length == 0) {
         resultHTML += "<p style='color:red;'>Sorry, no housing and dining combos fit your budget. Try increasing your budget or reducing other expenses.</p>";
     } else {
-        resultHTML += "<h2>Top Recommendations For You</h2>";
+        resultHTML += "<h2 style='color: #E9D358'>Top Recommendations For You</h2>";
 
         for (var i = 0; i < topCombos.length; i++) {
             var combo = topCombos[i];
 
-            resultHTML += "<div style='border: 2px solid #07294d; border-radius: 10px; padding: 20px; margin-bottom: 20px; background: #07294d;'>";
+            resultHTML += "<div style='border: 2px solid #07294d; border-radius: 10px; padding: 20px; margin-bottom: 20px; background: #07294d; color: #E9D358;'>";
             resultHTML += "<h3 style='color: #E9D358'>Option " + (i + 1) + "</h3>";
             resultHTML += "<p><b>Housing:</b> " + combo.housing.name + " — $" + combo.housing.cost + "/term (" + combo.housing.style + ")</p>";
             resultHTML += "<p><em>" + combo.housing.notes + "</em></p>";
@@ -165,6 +165,7 @@ function calculateExpenses() {
         }
     }
 
-    // Show the results on the page
-    document.getElementById("result").innerHTML = resultHTML;
+    // Save the results and send the user to the results page
+    localStorage.setItem("calculatorResult", resultHTML);
+    window.location.href = "results.html";
 }
