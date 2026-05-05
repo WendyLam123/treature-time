@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="">
+		<title>Calculator Results</title>
+		<link href="web.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="homeHeader">
+			<img src="Images/logo.png" alt="Drexel Logo" class="logo">
+			<h1>Your Results</h1>
+		</div>
+        <div class="navbar">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="dining.html">Dining</a>
+                <a href="housing.html">Housing</a>
+                <a href="calculator.html">Calculator</a>
+            </ul>
+        </div>
+
+        <div class="form">
+            <div id="result" style="max-width: 600px; margin: 20px auto;"></div>
+
+            <div style="text-align: center; margin: 30px auto;">
+                <a href="calculator.html" class="calculateButton" style="display: inline-block;">Go Back</a>
+            </div>
+        </div>
+
+        <script>
+            var saved = localStorage.getItem("calculatorResult");
+
+            if (saved) {
+                document.getElementById("result").innerHTML = saved;
+            } else {
+                document.getElementById("result").innerHTML = "<p style='color:red;'>No results found. Please fill out the calculator first.</p>";
+            }
+        </script>
+	</body>
+</html>
