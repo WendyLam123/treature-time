@@ -18,25 +18,6 @@ a {
 	padding: 60px 20px 20px 20px
 }
 
-.itemBar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	gap: 10px;
-	padding: 20px 40px;
-	box-sizing: border-box;
-	flex-wrap: wrap;
-}
-
-
-.itemBar a {
-    background-color: #070340;
-    margin: 0px 10px 0px 10px;
-    padding-bottom: 20px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
 .item h2{
 	color:#E9D358 !important;
 	border: none !important;
@@ -53,6 +34,8 @@ a {
     border-radius: .5em;
     background-color: #070340;
     padding: 20px 10px;
+	color: #E9D358;
+	text-align: center;
 }
 
 .item.hover {
@@ -66,11 +49,6 @@ a {
 	border-radius: .5em;
 }
 
-.item {
-	color: #E9D358;
-	text-align: center;
-}
-
 .item li {
 	color: #E9D358;
 	text-align: left;
@@ -79,11 +57,13 @@ a {
 
 .dining_option{
 	display: flex;
+	flex: 1 1 350px;
 	flex-direction: row;
 	justify-content: space-around;
 	align-content: center;
 	width: 100%;
 	gap: 10px;
+	flex-wrap: wrap;
 }
 
 /*need to change to the housing page's tag style*/
@@ -204,6 +184,7 @@ a {
 	justify-content: space-around;
 	font-weight: bold;
 	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	
 }
 
 .sidebar-wrapper {
@@ -347,7 +328,8 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	width: 50%;
+	width: 60%;
+	min-width: 300px;
 }
 
 .container{
@@ -376,4 +358,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.button_container:hover{
+	transform: scale(1.05); 
 }
