@@ -3,139 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bentley Hall | Drexel Housing Guide</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            border-left: 40px solid #07294d;
-            border-right: 40px solid #07294d;
-        }
-
-        .homeHeader {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 6%;
-            background: #07294d;
-            border-bottom: 4px solid #ffc600;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            height: 60px;
-        }
-
-        .homeHeader h1 {
-            color: white;
-            font-size: 1.4rem;
-        }
-
-        .navigation ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-        }
-
-        .navigation li {
-            margin-left: 20px;
-        }
-
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .main-layout {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 25px;
-            max-width: 1300px;
-            margin: auto;
-            padding: 35px 20px;
-        }
-
-        .welcome-bar {
-            grid-column: 1 / -1;
-            background: #ffc600;
-            padding: 18px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .sidebar-master-list {
-            background: rgba(7,41,77,0.9);
-            padding: 20px;
-            border-radius: 14px;
-            color: white;
-            position: sticky;
-            top: 20px;
-        }
-
-        .sidebar-card {
-            background: white;
-            color: #333;
-            margin-top: 12px;
-            padding: 14px;
-            border-radius: 12px;
-        }
-
-        .sidebar-card h4 {
-            margin: 0 0 5px 0;
-            color: #07294d;
-        }
-
-        .info-content {
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-        }
-
-        .info-content h2 {
-            border-left: 5px solid #ffc600;
-            padding-left: 10px;
-            color: #07294d;
-        }
-
-        .review-box {
-            background: #f4f7f6;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-
-        .image-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .image-row img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .footer-note {
-            margin-top: 30px;
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-    </style>
+    <title>Living in Bentley | Drexel Housing Guide</title>
+    <link rel="stylesheet" href="web.css">
 </head>
 <body>
 
-    <div class="homeHeader">
+    <header class="homeHeader">
         <div class="header-left">
-            <img src="DrexelLogo.png" class="logo">
+            <img src="logo.png" class="logo" alt="Drexel Logo">
             <h1>Bentley Hall</h1>
         </div>
         <nav class="navigation">
@@ -146,92 +21,78 @@
                 <li><a href="calculator.html">Calculator</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-    <div class="main-layout">
-        <div class="welcome-bar">
-            The newest traditional-style dorm on campus, home to the Honors College
+    <main class="main-layout">
+        <div class="quick-tips-bar">
+            <span>The "Newest" Traditional Dorm</span>
+            <span>Honors College Community</span>
+            <span>Individual-Entry Bathrooms</span>
         </div>
 
-        <div class="sidebar-master-list">
-            <h2 style="text-align:center;">Quick Facts</h2>
-            <div class="sidebar-card">
-                <h4>Address</h4>
-                <p>3301 Arch Street, Philadelphia, PA</p>
-            </div>
-            <div class="sidebar-card">
-                <h4>Cost</h4>
-                <p>About $4,015 per term</p>
-            </div>
-            <div class="sidebar-card">
-                <h4>Style</h4>
-                <p>Traditional (Renovated 2019)</p>
-            </div>
-            <div class="sidebar-card">
-                <h4>Key Perk</h4>
-                <p>Honors seminar rooms & ground floor gallery</p>
-            </div>
-        </div>
+        <aside class="sidebar-wrapper">
+            <div class="sidebar-master-list">
+                <h2 style="text-align:center; text-transform:uppercase; letter-spacing:1px;">The Specs</h2>
+                <p style="font-size: 0.8rem; text-align: center; margin-bottom: 20px;">The academic choice</p>
+                
+                <div class="sidebar-card">
+                    <h4>Address</h4>
+                    <p>3301 Arch Street<br>Right on the corner of 33rd and Arch.</p>
+                </div>
 
-        <div class="info-content">
-            <h2>Overview</h2>
-            <p>
-                Bentley Hall is widely considered one of the best traditional dorms because it was completely reimagined in 2019. 
-                It houses the Honors College, so it has a slightly more academic and quieter reputation compared to other freshman halls. 
-            </p>
-            <p>
-                The building feels modern and clean, featuring unique "living room" gallery spaces and seminar rooms on the ground floor.
-            </p>
+                <div class="sidebar-card">
+                    <h4>Cost</h4>
+                    <p>About $4,015 per term</p>
+                </div>
 
-            <h2>Building Layout</h2>
+                <div class="sidebar-card">
+                    <h4>The Setup</h4>
+                    <p>A traditional double-occupancy layout that was totally gutted and renovated in 2019.</p>
+                </div>
+
+                <div class="sidebar-card">
+                    <h4>Key Perk</h4>
+                    <p>Seminar rooms and a gallery right on the ground floor.</p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="info-content">
+            <h2>The Bentley Vibe</h2>
             <p>
-                The layout emphasizes community by alternating between social and study lounges on every floor. 
-                This gives you a dedicated spot to either hang out or focus depending on what floor you're on.
+                Bentley is basically the "sophisticated" choice for freshman housing. Because it houses the Honors College, people assume it’s just a library with beds, but it’s actually one of the cleanest and most modern buildings on the block. It was completely reimagined in 2019, so you aren't dealing with that "old dorm" smell you find in other traditional halls.
             </p>
 
-            <div class="image-row">
-                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x04-2person.jpg">
-                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x13-2person.jpg">
-                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x26-2person.jpg">
+            <div class="choice-pill"><strong>The Lounges:</strong> Every floor alternates between social and study lounges. If your floor is too loud, just go up or down one level to find a quiet spot.</div>
+            <div class="choice-pill"><strong>Privacy:</strong> Even though it's a "communal" bathroom setup, they are individual-entry. You get your own private space to shower without the awkward curtain vibes.</div>
+
+            <h3>Room Life</h3>
+            <p>
+                The rooms are standard 12' x 16' doubles. The furniture is fresh and modern, but there is one big catch: the beds are at a fixed height. Don't bring those plastic bed risers from Target because you can't actually adjust the frames to loft them.
+            </p>
+
+            <div class="image-row" style="display: flex; gap: 15px; justify-content: center;">
+                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x04-2person.jpg" class="layout-img" style="max-width: 30%;" alt="Bentley room plan 1">
+                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x13-2person.jpg" class="layout-img" style="max-width: 30%;" alt="Bentley room plan 2">
+                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/bentley-hall-typical-room-x26-2person.jpg" class="layout-img" style="max-width: 30%;" alt="Bentley room plan 3">
             </div>
 
-            <h2>Rooms</h2>
-            <p>
-                Rooms are standard double-occupancy, measuring approximately 12' x 16'. 
-                The furniture is modern, but keep in mind that the bed frames are at a set height and are not adjustable.
-            </p>
+            <h3>The Resident Reality</h3>
+            <div class="review-box">
+                <p><i>Bentley is definitely the "safe bet" if you want a modern room and care about your sleep. It’s way quieter than Kelly. The only real pain is the kitchen situation—there's only one, and it's on the first floor. If you live on floor 6 and want to make ramen, you’re going for a hike.</i></p>
+            </div>
+
+            <h2>Practical Details</h2>
             <ul>
-                <li>Two Extra Long Twin beds</li>
-                <li>Two desks (no storage/shelves) + chairs</li>
-                <li>Two-drawer dressers</li>
-                <li>Wardrobes</li>
+                <li><strong>Bathrooms:</strong> Two gender-specific multi-stall bathrooms and two single-occupancy bathrooms per floor. They’re kept pretty clean compared to the high-rises.</li>
+                <li><strong>Kitchen & Laundry:</strong> Both are stuck on the first floor. It gets crowded on Sunday nights, so try to do your laundry on a Tuesday morning if you can.</li>
+                <li><strong>Furniture:</strong> You get the standard Twin XL bed, a wardrobe, a desk (heads up: no built-in shelves), and a dresser.</li>
             </ul>
 
-            <h2>Bathrooms & Kitchens</h2>
-            <p>
-                Bentley uses a hallway-style bathroom setup, but they are individual-entry, meaning you still get privacy despite them being communal.
-                Each floor has two gender-specific multi-stall bathrooms and two single-occupancy bathrooms.
+            <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.7;">
+                <i>Based on student experiences and the 2019 renovation specs. This isn't an official Drexel brochure.</i>
             </p>
-            <p>
-                Unlike some halls with kitchens on every floor, Bentley's primary community kitchen is located on the first floor.
-            </p>
-
-            <h2>Final Thoughts</h2>
-            <div class="review-box">
-                <p>
-                    Bentley is the "safe bet" for students who want a modern feel without the cramped cylindrical shape of Millennium.
-                </p>
-                <p>
-                    <b>Pros:</b> Newest facilities, great mix of study/social space, and individual-entry bathrooms.
-                </p>
-                <p>
-                    <b>Cons:</b> Can feel "too academic" for some, and you have to hike to the first floor to use the kitchen.
-                </p>
-            </div>
-            <p class="footer-note">
-                Written from student experience — not official university info.
-            </p>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
