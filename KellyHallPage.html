@@ -4,138 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelly Hall | Drexel Housing Guide</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            border-left: 40px solid #07294d;
-            border-right: 40px solid #07294d;
-        }
-
-        .homeHeader {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 6%;
-            background: #07294d;
-            border-bottom: 4px solid #ffc600;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            height: 60px;
-        }
-
-        .homeHeader h1 {
-            color: white;
-            font-size: 1.4rem;
-        }
-
-        .navigation ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-        }
-
-        .navigation li {
-            margin-left: 20px;
-        }
-
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .main-layout {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 25px;
-            max-width: 1300px;
-            margin: auto;
-            padding: 35px 20px;
-        }
-
-        .welcome-bar {
-            grid-column: 1 / -1;
-            background: #ffc600;
-            padding: 18px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .sidebar-master-list {
-            background: rgba(7,41,77,0.9);
-            padding: 20px;
-            border-radius: 14px;
-            color: white;
-            position: sticky;
-            top: 20px;
-        }
-
-        .sidebar-card {
-            background: white;
-            color: #333;
-            margin-top: 12px;
-            padding: 14px;
-            border-radius: 12px;
-        }
-
-        .sidebar-card h4 {
-            margin: 0 0 5px 0;
-            color: #07294d;
-        }
-
-        .info-content {
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-        }
-
-        .info-content h2 {
-            border-left: 5px solid #ffc600;
-            padding-left: 10px;
-            color: #07294d;
-        }
-
-        .review-box {
-            background: #f4f7f6;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-
-        .image-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .image-row img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .footer-note {
-            margin-top: 30px;
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-    </style>
+    <link rel="stylesheet" href="web.css">
 </head>
 <body>
 
-    <div class="homeHeader">
+    <header class="homeHeader">
         <div class="header-left">
-            <img src="DrexelLogo.png" class="logo">
+            <img src="logo.png" class="logo" alt="Drexel Logo">
             <h1>Kelly Hall</h1>
         </div>
         <nav class="navigation">
@@ -146,88 +21,77 @@
                 <li><a href="calculator.html">Calculator</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-    <div class="main-layout">
-        <div class="welcome-bar">
-            The social hub of freshman year, completely renovated in 2023
+    <main class="main-layout">
+        <div class="quick-tips-bar">
+            <span>The Social Peak of Freshman Year</span>
+            <span>Massive Common Spaces</span>
+            <span>Central Staircase Neighborhoods</span>
         </div>
 
-        <div class="sidebar-master-list">
-            <h2 style="text-align:center;">Quick Facts</h2>
-            <div class="sidebar-card">
-                <h4>Address</h4>
-                <p>203 N. 34th Street, Philadelphia, PA</p>
-            </div>
-            <div class="sidebar-card">
-                <h4>Cost</h4>
-                <p>About $4,015 per term</p>
-            </div>
-            <div class="sidebar-card">
-                <h4>Style</h4>
-                <p>Traditional "Neighborhood" Layout</p>
-            </div>
-            <div class="sidebar-card">
-                <h4>Floors</h4>
-                <p>10 total</p>
-            </div>
-        </div>
+        <aside class="sidebar-wrapper">
+            <div class="sidebar-master-list">
+                <h2 style="text-align:center; text-transform:uppercase; letter-spacing:1px;">The Specs</h2>
+                <p style="font-size: 0.8rem; text-align: center; margin-bottom: 20px;">The social rundown</p>
+                
+                <div class="sidebar-card">
+                    <h4>Address</h4>
+                    <p>203 N. 34th Street, Philadelphia, PA 19104</p>
+                </div>
 
-        <div class="info-content">
-            <h2>Overview</h2>
-            <p>
-                Kelly Hall is the go-to choice for social butterflies. Following its massive 2023 renovation, the building is fresh and modern while keeping its reputation as one of the easiest places to meet people.
-            </p>
-            <p>
-                The star of the show is the "Kelly Commons" addition, which provides a massive amount of study and social space on the lower levels.
-            </p>
+                <div class="sidebar-card">
+                    <h4>Cost</h4>
+                    <p>About $4,015 per term</p>
+                </div>
 
-            <h2>Building Layout</h2>
+                <div class="sidebar-card">
+                    <h4>The Setup</h4>
+                    <p>10 floors connected by central spiral staircases that link "neighborhoods" of two floors each.</p>
+                </div>
+
+                <div class="sidebar-card">
+                    <h4>Building Status</h4>
+                    <p>Fully renovated in 2023. Everything inside is brand new.</p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="info-content">
+            <h2>The Kelly Vibe</h2>
             <p>
-                Kelly features a unique "neighborhood" plan. A central spiral staircase connects two floors at a time, leading into a shared double-height lounge. 
-                This design encourages everyone to leave their rooms and hang out in the common areas.
+                Kelly Hall is basically the go-to spot if you're a social butterfly. After the massive 2023 renovation, it went from being one of the oldest-feeling dorms to arguably the most modern on campus. It has a reputation for being the easiest place to meet people, mostly because the building is designed to keep everyone out of their rooms and in the common areas.
             </p>
 
-            <div class="image-row">
-                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/kelly-hall-typical-room-x13-2person.jpg">
-                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/kelly-hall-typical-room-x20-2person.jpg">
+            <div class="choice-pill"><strong>The Commons:</strong> The new "Kelly Commons" addition is huge. It's the only place to study when your roommate is being too loud.</div>
+            <div class="choice-pill"><strong>The Neighborhoods:</strong> Instead of long, lonely hallways, floors are grouped together via central staircases and double-height lounges.</div>
+
+            <h3>Room Life</h3>
+            <p>
+                The rooms are traditional doubles with vinyl tile floors. If you can manage to snag a corner unit, they’re the hidden gems of the building—they have a slightly larger and more unique footprint than the standard rectangular rooms. Just be ready for the noise; because the lounges are so open, sound travels.
+            </p>
+
+            <div class="image-row" style="display: flex; gap: 15px; justify-content: center;">
+                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/kelly-hall-typical-room-x13-2person.jpg" class="layout-img" style="max-width: 45%;" alt="Kelly Standard Room">
+                <img src="https://drexel.edu/studentlife/~/media/Drexel/EMSS-Site-Group/StudentLife/Images/campus-living/housing/residential-halls/room-plans/kelly-hall-typical-room-x20-2person.jpg" class="layout-img" style="max-width: 45%;" alt="Kelly Corner Room">
             </div>
 
-            <h2>Rooms</h2>
-            <p>
-                Rooms are traditional doubles with vinyl tile flooring. If you can snag a corner unit, they offer a slightly larger and more unique footprint than the standard rectangular rooms.
-            </p>
+            <h3>The Student Reality</h3>
+            <div class="review-box">
+                <p><i>If you want a quiet, isolated experience, Kelly is definitely not for you. But if you want to make friends fast, it’s the best spot on campus. Just a heads up: some floors have issues with the temperature control when the seasons change, and the open staircases mean you'll probably hear your neighbors a lot more than in Millennium.</i></p>
+            </div>
+
+            <h2>Practical Details</h2>
             <ul>
-                <li>Two Extra Long Twin beds</li>
-                <li>Two desks with chairs</li>
-                <li>Two wardrobes</li>
+                <li><strong>Bathrooms:</strong> They’re communal but modern. You get private, lockable stalls for showers and toilets, so it doesn't feel like a locker room.</li>
+                <li><strong>Kitchens:</strong> One kitchen for every two floors, located in the duplex lounges. They can get crowded on weekends.</li>
+                <li><strong>Laundry:</strong> One dedicated room on the lower level. It’s a hike if you live on the 10th floor, so plan accordingly.</li>
             </ul>
 
-            <h2>Bathrooms & Kitchens</h2>
-            <p>
-                Bathrooms here are communal but modern. Each floor has communal bathrooms with private, lockable stalls for both showers and toilets. 
-                There is also one single-use bathroom per floor for extra privacy.
+            <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.7;">
+                <i>This guide is based on student life post-renovation, not the old brochures.</i>
             </p>
-            <p>
-                Kitchens are located in each duplex lounge, meaning there is one kitchen available for every two floors.
-            </p>
-
-            <h2>Final Thoughts</h2>
-            <div class="review-box">
-                <p>
-                    If you want a quiet, isolated experience, Kelly is NOT for you. But if you want to make friends fast, it’s arguably the best spot on campus.
-                </p>
-                <p>
-                    <b>Pros:</b> Brand new 2023 renovation, extremely social layout, and the massive Kelly Commons space.
-                </p>
-                <p>
-                    <b>Cons:</b> Can be noisy due to the open duplex lounges, and some students report issues with temperature control.
-                </p>
-            </div>
-            <p class="footer-note">
-                Written from student experience — not official university info.
-            </p>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
