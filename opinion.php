@@ -11,20 +11,23 @@
 	</head>
 
 <body>
+<div class="homeHeader">
+    <div class="header-left">
+        <img src="Images/logo.png" class="logo">
+        <h1>Survey</h1>
+    </div>
 
-  <div class="homeHeader">
-    <a href="https://drexel.edu" target="_blank">
-      <img src="/Images/logo.png" alt="Drexel Logo" class="logo">
-    </a>
     <nav class="navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dining.html">Dining</a></li>
-        <li><a href="housing.html">Housing</a></li>
-        <li><a href="calculator.html">Calculator</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="housing.html">Housing</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+		    <li><a href="opinion.php">Survey</a></li>
+        </ul>
     </nav>
-  </div>
+</div>
+
   <div class="main-layout-opinion_page">
     <h1>Drexel Housing / Dining Survey</h1>
 
@@ -142,12 +145,6 @@
     </form>
 
   </div>
-  
-
-  <div class="result">
-
-    </div>
-    <script src = "opinion.js"></script>
 </body>
 </html>
 <?php

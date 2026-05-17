@@ -1,10 +1,10 @@
 Area: dining
-Satisfaction: 1
-Satisfaction Feedback: 
-Value: 3
-Value Feedback: one
+Satisfaction: 3
+Satisfaction Feedback: test
+Value: 
+Value Feedback: 
 Convenience: 
-Convenience Feedback: 
-Web Rank: 
-Web Feedback: 
+Convenience Feedback: test1
+Web Rank: 4
+Web Feedback: test2
 ---------------------------
