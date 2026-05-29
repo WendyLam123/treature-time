@@ -26,8 +26,10 @@ The survey page allows users to submit their feedback about Drexel dining, housi
 Visuals such as images are stored in the Images directory. 
 
 ## Setting up
-## Add your files
-* [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+## Clone the project
+Put this code in the terminal: 
+    clone with https: 
+        https://gitlab.cci.drexel.edu/cid/2526/ws1023/64/ge4/ci-102-project.git
 * [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
 
 ```
