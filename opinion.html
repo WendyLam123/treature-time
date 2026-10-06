@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>    
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="">
+		<title>Survey</title>
+		<link href="web.css" rel="stylesheet" type="text/css" />
+		<script src="https://kit.fontawesome.com/44ae50a47e.js" crossorigin="anonymous"></script>
+		<script src="web.js"></script>
+	</head>
+
+<body>
+<div class="homeHeader">
+    <div class="header-left">
+        <img src="Images/logo.png" class="logo">
+        <h1>Survey</h1>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="housing.html">Housing</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+		        <li><a href="opinion.html">Survey</a></li>
+        </ul>
+    </nav>
+</div>
+
+  <div class="main-layout-opinion_page">
+    <h1>Drexel Housing / Dining Survey</h1>
+
+    <form action ="http://localhost:8081/api/survey" method="POST">
+
+      <div class="container">
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name" name="user_name" placeholder="Enter your name..." required>
+        <br><br>
+        <label for="user_email">Email:</label>
+        <input type="email" id="user_email" name="user_email" placeholder="Enter your email..." required>
+      </div>
+      <br>
+
+      <div class="container">
+        <p><strong>Which area are you evaluating?</strong></p>
+        <label for="area">Choose an area:</label>
+        <select name="area" id="area" required>
+          <option value="">Select</option>
+          <option value="housing">Housing</option>
+          <option value="dining">Dining</option>
+          <option value="both">Both</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <br>
+
+      <div class="container">
+        <p><strong>Rate each item on a scale of 1 to 5:</strong></p>
+        <p>5 = Excellent</p> 
+        <p>3 = Neutral</p>
+        <p>1 = Very poor</p>
+      </div>
+      <br><br>
+
+      <div class="container">
+      <label for="satisfaction">Overall, how satisfied are you with your experience?</label>
+        <p>(1 - Very dissatisfied &#8594; 5 - Very satisfied)</p>
+        <select name="satisfaction" id="satisfaction" required>
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+      <br>
+
+      <div class="container">
+      <label for="satisfaction_feedback">Do you have any other feedback about your experience?</label>
+      <br><br>
+      <textarea name="satisfaction_feedback" id="satisfaction_feedback" placeholder="Type your feedback here..." style="width: 90%; height:100px"></textarea>
+      </div>
+      <br><br>
+
+      <div class="container">
+      <label for="value">How would you rate the value for money (cost vs quality)?</label>
+        <p>(1 - Very poor &#8594; 5 - Excellent)</p>
+        <select name="value" id="value" required >
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+      <br>
+
+      <div class="container">
+      <label for="value_feedback">Do you have any other feedback about your experience?</label>
+      <br><br>
+      <textarea name="value_feedback" id="value_feedback" placeholder="Type your feedback here..." style="width: 90%; height:100px"></textarea>
+      </div>
+      <br><br>
+
+      <div class="container">
+      <label for="convenient">How convenient was this experience</label>
+        <p>(1 - Very inconvenient &#8594; 5 - Very convenient)</p>
+        <select name="convenient" id="convenient" required>
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+      <br>
+
+      <div class="container">
+      <label for="convenient_feedback">Do you have any other feedback about your experience?</label>
+      <br>
+      <textarea name="convenient_feedback" id="convenient_feedback" placeholder="Type your feedback here..." style="width: 90%; height:100px"></textarea>
+      </div>
+      <br><br>
+
+      <div class="container">
+      <label for="web_rank">How was your experience using this website?</label>
+        <p>(1 - Not satisified &#8594; 5 - Very satisified)</p>
+        <select name="web_rank" id="web_rank" required>
+          <option value="">Select 1-5</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+      <br>
+      
+      <div class="container">
+      <label for="web_feedback">Do you have any other feedback for the website?</label>
+      <br><br>
+      <textarea name="web_feedback" id="web_feedback" placeholder="Type your feedback here..." style="width: 90%; height:100px;"></textarea>
+      </div>
+      <br><br>
+
+      <div class="button_container">
+        <button name="submit" type="submit" class="submit_button">Submit</button>
+      </div>
+      <br><br>
+    </form>
+
+  </div>
+</body>
+</html>
