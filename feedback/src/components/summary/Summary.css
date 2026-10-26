@@ -1,0 +1,27 @@
+.summary{
+    padding: 0 10px;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #070340;
+    color: white;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.summary h1{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+.summaryContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
