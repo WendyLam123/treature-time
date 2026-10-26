@@ -4,26 +4,30 @@ import connectToDatabase from "./db.js";
 
 const app = express();
 const PORT = process.env.PORT || 8081;
-
 const db = connectToDatabase();
 
-app.use(cors());
-app.use(express.urlencoded({ extended: true }));
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "http://127.0.0.1:5500",
+  }),
+);
 
-app.post("/api/survey", (req, res, next) =>{
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.post("/api/survey", async(req, res, next) =>{
     const {user_name, user_email, area, satisfaction, satisfaction_feedback, value, value_feedback, convenient, convenient_feedback, web_rank, web_feedback} = req.body;
     const sql = `
     INSERT INTO survey (user_name, user_email, area, satisfaction, satisfaction_feedback, value, value_feedback, convenient, convenient_feedback, web_rank, web_feedback)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
     
-    console.log(req.body)
-    db.query(sql, [user_name, user_email, area, satisfaction, satisfaction_feedback, value, value_feedback, convenient, convenient_feedback, web_rank, web_feedback], (err, result) => {
-        if (err) {
-            return next(err);
-        }
-        res.redirect("http://127.0.0.1:5500/thankyou.html");
-    });
+    try{
+        await db.query(sql, [user_name, user_email, area, satisfaction, satisfaction_feedback, value, value_feedback, convenient, convenient_feedback, web_rank, web_feedback]);
+        res.redirect(process.env.THANK_YOU_URL || "http://127.0.0.1:5500/thankyou.html");
+    }catch(err){
+        return next(err);
+    }
 });
 
 //404 hander
@@ -39,6 +43,10 @@ app.use((err, req, res, next) =>{
     res.status(500).send("Server Error: " + err.message);
 })
 
-app.listen(PORT, ()=>{
-    console.log("Server started on port " + PORT)
-})
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+  });
+}
+
+export default app;
