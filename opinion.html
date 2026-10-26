@@ -31,7 +31,7 @@
   <div class="main-layout-opinion_page">
     <h1>Drexel Housing / Dining Survey</h1>
 
-    <form action ="http://localhost:8081/api/survey" method="POST">
+    <form id="surveyForm" method="POST">
 
       <div class="container">
         <label for="user_name">Name:</label>
@@ -154,5 +154,19 @@
     </form>
 
   </div>
+
+  <script>
+      const form = document.getElementById("surveyForm");
+      const isLocal = ["localhost", "127.0.0.1"].includes(
+        window.location.hostname
+      );
+
+      const backendUrl = isLocal
+        ? "http://localhost:8081"
+        : "https://treature-time.vercel.app";
+
+      form.action = `${backendUrl}/api/survey`;
+    </script>
+
 </body>
 </html>
